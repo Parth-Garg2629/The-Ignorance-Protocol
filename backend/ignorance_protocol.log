@@ -1,0 +1,68 @@
+2026-03-29 15:48:30,248 [INFO] __main__: ============================================================
+2026-03-29 15:48:30,249 [INFO] __main__:   🛡️  Ignorance Protocol Engine  —  Backend starting
+2026-03-29 15:48:30,249 [INFO] __main__:   Model  : distilgpt2
+2026-03-29 15:48:30,249 [INFO] __main__:   Device : cpu
+2026-03-29 15:48:30,249 [INFO] __main__:   Gamma  : 1.8
+2026-03-29 15:48:30,249 [INFO] __main__:   Port   : 5000
+2026-03-29 15:48:30,249 [INFO] __main__: ============================================================
+2026-03-29 15:48:30,253 [INFO] model.loader: Loading model 'distilgpt2' on device 'cpu' …
+2026-03-29 15:48:31,893 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:31,897 [WARNING] huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-29 15:48:32,147 [INFO] httpx: HTTP Request: GET https://huggingface.co/distilgpt2/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:32,466 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:32,715 [INFO] httpx: HTTP Request: GET https://huggingface.co/distilgpt2/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:32,966 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilgpt2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 15:48:33,206 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilbert/distilgpt2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-29 15:48:33,447 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilgpt2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 15:48:33,688 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilbert/distilgpt2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-29 15:48:33,928 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/vocab.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:34,173 [INFO] httpx: HTTP Request: GET https://huggingface.co/distilgpt2/resolve/main/vocab.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:35,017 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/merges.txt "HTTP/1.1 200 OK"
+2026-03-29 15:48:35,273 [INFO] httpx: HTTP Request: GET https://huggingface.co/distilgpt2/resolve/main/merges.txt "HTTP/1.1 200 OK"
+2026-03-29 15:48:35,972 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/added_tokens.json "HTTP/1.1 404 Not Found"
+2026-03-29 15:48:36,216 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/special_tokens_map.json "HTTP/1.1 404 Not Found"
+2026-03-29 15:48:36,459 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/tokenizer.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:36,706 [INFO] httpx: HTTP Request: GET https://huggingface.co/distilgpt2/resolve/main/tokenizer.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:37,676 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/chat_template.jinja "HTTP/1.1 404 Not Found"
+2026-03-29 15:48:38,130 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:38,502 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/model.safetensors "HTTP/1.1 302 Found"
+2026-03-29 15:48:38,790 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilbert/distilgpt2/xet-read-token/2290a62682d06624634c1f46a6ad5be0f47f38aa "HTTP/1.1 200 OK"
+2026-03-29 15:48:53,629 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/generation_config.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:53,894 [INFO] httpx: HTTP Request: GET https://huggingface.co/distilgpt2/resolve/main/generation_config.json "HTTP/1.1 200 OK"
+2026-03-29 15:48:53,919 [INFO] model.loader: Model ready in 23.7s
+2026-03-29 15:48:53,961 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.8.155:5000
+2026-03-29 15:48:53,961 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-29 15:51:42,105 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 15:51:42] "[31m[1mGET /query HTTP/1.1[0m" 405 -
+2026-03-29 15:51:42,361 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 15:51:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 15:51:48,533 [INFO] routes.query: [PASS ] prompt='What is the capital of France?'  H=0.091  γ=1.8
+2026-03-29 15:51:48,543 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 15:51:48] "POST /query HTTP/1.1" 200 -
+2026-03-29 15:55:26,765 [INFO] __main__: ============================================================
+2026-03-29 15:55:26,765 [INFO] __main__:   🛡️  Ignorance Protocol Engine  —  Backend starting
+2026-03-29 15:55:26,765 [INFO] __main__:   Model  : distilgpt2
+2026-03-29 15:55:26,766 [INFO] __main__:   Device : cpu
+2026-03-29 15:55:26,766 [INFO] __main__:   Gamma  : 1.8
+2026-03-29 15:55:26,766 [INFO] __main__:   Port   : 5000
+2026-03-29 15:55:26,766 [INFO] __main__: ============================================================
+2026-03-29 15:55:26,767 [INFO] model.loader: Loading model 'distilgpt2' on device 'cpu' …
+2026-03-29 15:55:27,457 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-29 15:55:27,737 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-29 15:55:27,739 [WARNING] huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-29 15:55:28,023 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilgpt2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 15:55:28,316 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilbert/distilgpt2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-29 15:55:28,577 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilgpt2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 15:55:28,833 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/distilbert/distilgpt2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-29 15:55:29,275 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/config.json "HTTP/1.1 200 OK"
+2026-03-29 15:55:29,679 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/distilgpt2/resolve/main/generation_config.json "HTTP/1.1 200 OK"
+2026-03-29 15:55:29,687 [INFO] model.loader: Model ready in 2.9s
+2026-03-29 15:55:29,698 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.8.155:5000
+2026-03-29 15:55:29,698 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-29 15:55:31,931 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 15:55:31] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 15:55:31,971 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 15:55:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-03-29 15:55:35,563 [INFO] werkzeug: 172.22.8.155 - - [29/Mar/2026 15:55:35] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 15:55:35,589 [INFO] werkzeug: 172.22.8.155 - - [29/Mar/2026 15:55:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
