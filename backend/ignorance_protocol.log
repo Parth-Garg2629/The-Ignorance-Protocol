@@ -233,3 +233,65 @@
 2026-03-29 16:53:38,804 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 16:53:38] "GET /health HTTP/1.1" 200 -
 2026-03-29 16:53:50,633 [INFO] routes.query: [PASS ] prompt='what  is orange'  H=0.524  γ=1.8
 2026-03-29 16:53:50,653 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 16:53:50] "POST /query HTTP/1.1" 200 -
+2026-03-29 16:57:31,884 [INFO] __main__: ============================================================
+2026-03-29 16:57:31,885 [INFO] __main__:   🛡️  Ignorance Protocol Engine  —  Backend starting
+2026-03-29 16:57:31,885 [INFO] __main__:   Model  : Qwen/Qwen2.5-1.5B-Instruct
+2026-03-29 16:57:31,885 [INFO] __main__:   Device : cpu
+2026-03-29 16:57:31,885 [INFO] __main__:   Gamma  : 1.8
+2026-03-29 16:57:31,885 [INFO] __main__:   Port   : 5000
+2026-03-29 16:57:31,886 [INFO] __main__: ============================================================
+2026-03-29 16:57:31,887 [INFO] model.loader: Loading model 'Qwen/Qwen2.5-1.5B-Instruct' on device 'cpu' …
+2026-03-29 16:57:36,597 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 16:57:36,650 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-1.5B-Instruct/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/config.json "HTTP/1.1 200 OK"
+2026-03-29 16:57:36,937 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 16:57:36,985 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-1.5B-Instruct/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-29 16:57:37,267 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-29 16:57:37,549 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-29 16:57:38,073 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct "HTTP/1.1 200 OK"
+2026-03-29 16:57:38,363 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 16:57:38,410 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-1.5B-Instruct/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/config.json "HTTP/1.1 200 OK"
+2026-03-29 16:58:17,928 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 16:58:18,046 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-1.5B-Instruct/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/generation_config.json "HTTP/1.1 200 OK"
+2026-03-29 16:58:18,291 [INFO] model.loader: Model ready in 46.4s
+2026-03-29 16:58:18,953 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.8.155:5000
+2026-03-29 16:58:18,956 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-29 16:58:55,663 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 16:58:55] "[33mGET / HTTP/1.1[0m" 404 -
+2026-03-29 17:00:00,803 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 17:00:00] "GET /health HTTP/1.1" 200 -
+2026-03-29 17:00:07,881 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 17:00:07] "OPTIONS /query HTTP/1.1" 200 -
+2026-03-29 17:00:36,131 [INFO] routes.query: [PASS ] prompt='compute 2 plus 6'  H=0.167  γ=1.8
+2026-03-29 17:00:36,178 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 17:00:36] "POST /query HTTP/1.1" 200 -
+2026-03-29 17:00:48,629 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 17:00:48] "OPTIONS /query HTTP/1.1" 200 -
+2026-03-29 17:02:32,083 [INFO] routes.query: [PASS ] prompt='what is orange'  H=0.612  γ=1.8
+2026-03-29 17:02:32,100 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 17:02:32] "POST /query HTTP/1.1" 200 -
+2026-03-29 17:06:07,164 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 17:06:07] "GET /health HTTP/1.1" 200 -
+2026-03-29 17:09:43,801 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 17:09:43] "GET /health HTTP/1.1" 200 -
+2026-03-29 17:10:10,877 [INFO] __main__: ============================================================
+2026-03-29 17:10:10,878 [INFO] __main__:   🛡️  Ignorance Protocol Engine  —  Backend starting
+2026-03-29 17:10:10,878 [INFO] __main__:   Model  : Qwen/Qwen2.5-1.5B-Instruct
+2026-03-29 17:10:10,879 [INFO] __main__:   Device : cpu
+2026-03-29 17:10:10,879 [INFO] __main__:   Gamma  : 1.8
+2026-03-29 17:10:10,879 [INFO] __main__:   Port   : 5000
+2026-03-29 17:10:10,879 [INFO] __main__: ============================================================
+2026-03-29 17:10:10,882 [INFO] model.loader: Loading model 'Qwen/Qwen2.5-1.5B-Instruct' on device 'cpu' …
+2026-03-29 17:10:11,774 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:10:11,777 [WARNING] huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-03-29 17:10:11,815 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-1.5B-Instruct/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:10:12,114 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:10:12,152 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-1.5B-Instruct/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-03-29 17:10:12,432 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-03-29 17:10:12,697 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-03-29 17:10:13,271 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-1.5B-Instruct "HTTP/1.1 200 OK"
+2026-03-29 17:10:13,555 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:10:13,594 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-1.5B-Instruct/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/config.json "HTTP/1.1 200 OK"
+2026-03-29 17:10:43,584 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/resolve/main/generation_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-03-29 17:10:43,647 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/Qwen/Qwen2.5-1.5B-Instruct/989aa7980e4cf806f80c7fef2b1adb7bc71aa306/generation_config.json "HTTP/1.1 200 OK"
+2026-03-29 17:10:43,949 [INFO] model.loader: Model ready in 33.1s
+2026-03-29 17:10:44,344 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.8.155:5000
+2026-03-29 17:10:44,348 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2026-03-29 17:11:17,376 [INFO] werkzeug: 127.0.0.1 - - [29/Mar/2026 17:11:17] "GET /health HTTP/1.1" 200 -

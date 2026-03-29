@@ -17,7 +17,7 @@ interface ConsoleTabProps {
   demoMode: boolean
 }
 
-const MODELS = ["GPT-4o", "Gemma-2b", "Claude 3.5"]
+const MODELS = ["Qwen 1.5B"]
 const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:5000"
 
 // ── Types for API response ────────────────────────────────────────────────────
@@ -220,12 +220,17 @@ export function ConsoleTab({
   const [isTyping, setIsTyping] = useState(false)
   const [modelOpen, setModelOpen] = useState(false)
   const [backendOnline, setBackendOnline] = useState<boolean | null>(null)
-  const bottomRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
 
-  // Scroll to bottom on new messages
+  // Scroll to bottom on new messages safely without shifting the whole browser window
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" })
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTo({
+        top: scrollContainerRef.current.scrollHeight,
+        behavior: "smooth",
+      })
+    }
   }, [messages, isTyping])
 
   // Health-check backend when switching to Live mode
@@ -279,7 +284,7 @@ export function ConsoleTab({
           const res = await fetch(`${API_URL}/query`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ prompt: trimmed, gamma: gammaLimit }),
+            body: JSON.stringify({ prompt: trimmed, gamma: gammaLimit, model: selectedModel }),
             signal: AbortSignal.timeout(120_000), // 2 min for slow models
           })
 
@@ -405,7 +410,10 @@ export function ConsoleTab({
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5 min-h-0">
+      <div
+        ref={scrollContainerRef}
+        className="flex-1 overflow-y-auto px-6 py-5 space-y-5 min-h-0"
+      >
         {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-center gap-4 py-16">
             <div className="w-14 h-14 rounded-2xl bg-[#00ff41]/8 border border-[#00ff41]/20 flex items-center justify-center">
@@ -430,7 +438,6 @@ export function ConsoleTab({
           <MessageBubble key={msg.id} msg={msg} />
         ))}
         {isTyping && <TypingIndicator />}
-        <div ref={bottomRef} />
       </div>
 
       {/* Input */}

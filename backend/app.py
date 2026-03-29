@@ -66,6 +66,11 @@ if __name__ == "__main__":
     logger.info(f"  Port   : {config.FLASK_PORT}")
     logger.info("=" * 60)
 
+    print("\n" + "🌟" * 30)
+    print("   Ignorance Protocol is ONLINE!")
+    print("   👉 OPEN YOUR BROWSER TO: http://localhost:3000")
+    print("🌟" * 30 + "\n")
+
     app = create_app()
     app.run(
         host=config.FLASK_HOST,
