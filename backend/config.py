@@ -4,12 +4,12 @@ Ignorance Protocol Engine — Configuration
 Tune model, entropy threshold (gamma), and runtime settings here.
 """
 
+import os
 import torch
 
 # ── Model ────────────────────────────────────────────────────────────────────
-# Swap to "google/gemma-2b" if you have ~5 GB VRAM available.
-# Other good CPU-friendly choices: "gpt2", "facebook/opt-125m"
-MODEL_NAME: str = "distilgpt2"
+# The HuggingFace model used for raw logit entropy calculations.
+MODEL_NAME: str = "Qwen/Qwen2.5-1.5B-Instruct"
 
 # Auto-detect CUDA; falls back to CPU
 DEVICE: str = "cuda" if torch.cuda.is_available() else "cpu"

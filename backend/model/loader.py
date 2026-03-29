@@ -83,12 +83,23 @@ class ModelLoader:
         if not self._initialized:
             raise RuntimeError("Model not loaded. Call .load() first.")
 
-        inputs = self.tokenizer(
-            prompt,
-            return_tensors="pt",
-            truncation=True,
-            max_length=512,
-        ).to(self.device)
+        messages = [{"role": "user", "content": prompt}]
+        
+        # Apply the Gemma chat template to get strict, accurate answers instead of rambling text
+        if hasattr(self.tokenizer, "apply_chat_template") and self.tokenizer.chat_template is not None:
+            inputs = self.tokenizer.apply_chat_template(
+                messages,
+                add_generation_prompt=True,
+                return_dict=True,
+                return_tensors="pt",
+            ).to(self.device)
+        else:
+            inputs = self.tokenizer(
+                prompt,
+                return_tensors="pt",
+                truncation=True,
+                max_length=512,
+            ).to(self.device)
 
         with torch.no_grad():
             output = self.model.generate(
